@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>HelloWorld</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="#Geekband Android性能优化[TOC]
+#一、内存优化
+##垃圾回收机制
+###什么是垃圾回收
+
+麦卡锡John McCarthy 1959年提出
+首先在Lisp语言实现垃圾回收机制
+对比C/C++这种需要自己管理内存的语言(我们需要自己为对象申请内存空间并归还，稍有不慎就会造成内存泄漏。)
+由此，就有了自动内存管理和回收机制
+垃圾回收器负责回收程序中已经不使用，但仍然被各种对象占用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HelloWorld">
+<meta property="og:url" content="http://linww.in/2016/04/22/Geekband Android性能优化/index.html">
+<meta property="og:site_name" content="HelloWorld">
+<meta property="og:description" content="#Geekband Android性能优化[TOC]
+#一、内存优化
+##垃圾回收机制
+###什么是垃圾回收
+
+麦卡锡John McCarthy 1959年提出
+首先在Lisp语言实现垃圾回收机制
+对比C/C++这种需要自己管理内存的语言(我们需要自己为对象申请内存空间并归还，稍有不慎就会造成内存泄漏。)
+由此，就有了自动内存管理和回收机制
+垃圾回收器负责回收程序中已经不使用，但仍然被各种对象占用">
+<meta property="og:updated_time" content="2016-03-12T15:54:14.581Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HelloWorld">
+<meta name="twitter:description" content="#Geekband Android性能优化[TOC]
+#一、内存优化
+##垃圾回收机制
+###什么是垃圾回收
+
+麦卡锡John McCarthy 1959年提出
+首先在Lisp语言实现垃圾回收机制
+对比C/C++这种需要自己管理内存的语言(我们需要自己为对象申请内存空间并归还，稍有不慎就会造成内存泄漏。)
+由此，就有了自动内存管理和回收机制
+垃圾回收器负责回收程序中已经不使用，但仍然被各种对象占用">
+  
+    <link rel="alternate" href="/atom.xml" title="HelloWorld" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">HelloWorld</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://linww.in"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Geekband Android性能优化" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/04/22/Geekband Android性能优化/" class="article-date">
+  <time datetime="2016-04-22T15:44:36.580Z" itemprop="datePublished">2016-04-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#Geekband Android性能优化<br>[TOC]</p>
+<p>#一、内存优化</p>
+<p>##垃圾回收机制</p>
+<p>###什么是垃圾回收</p>
+<ul>
+<li>麦卡锡John McCarthy 1959年提出</li>
+<li>首先在Lisp语言实现垃圾回收机制</li>
+<li>对比C/C++这种需要自己管理内存的语言(我们需要自己为对象申请内存空间并归还，稍有不慎就会造成内存泄漏。)</li>
+<li>由此，就有了自动内存管理和回收机制</li>
+<li>垃圾回收器负责回收程序中已经不使用，但仍然被各种对象占用的内存</li>
+<li>将程序员从繁重，危险的内存管理工作中解放出来</li>
+</ul>
+<p>缺点：可能会占用大量资源</p>
+<p>###关于垃圾回收<br>（Android本身使用Java语言，具有垃圾回收机制。）<br>PPT内容 - Android平台最吸引开发者的一个特性：<br>有垃圾回收机制，无需手动管理内存，<br>Android系统会自动跟踪所有的对象，并释放那些不再被使用的对象。</p>
+<p>###Android中的垃圾回收机制</p>
+<p>虚拟机会把系统的区域，划分为三个区域：</p>
+<ol>
+<li>Young Generation （新生代）</li>
+<li>Old Generation （老生代）</li>
+<li>Permanent Generation (永久代)</li>
+</ol>
+<p>Young放生命周期比较短的，Old放生命周期比较长的，<br>永久代是就放一些静态信息。</p>
+<p><strong>Young Generation：</strong><br>又被分为三个区域，Eden/S0/S1 。</p>
+<ul>
+<li>大多数新建的对象都位于Eden区</li>
+<li>当Eden区被对象填满时，就会执行Minor GC。并把所有存活下来的对象转移到其中一个survivor区。</li>
+<li>Survivor Space:S0/S1 有两个，存放每次垃圾回收后存活的对象。</li>
+<li>Minor GC同样会检查survivor区中存活下来的对象，并把它们转移到另一个survivor区。这样在一段时间内，总会有一个空的survivor区。</li>
+</ul>
+<p><strong>Old Generation：</strong></p>
+<ul>
+<li>存放长期存活的对象和经过多次Minor GC后依然存活下来的对象。</li>
+<li>满了进行Major GC。</li>
+</ul>
+<p><strong>Permanent Generation：</strong><br>存放方法区，方法区中有 要加载的类信息/静态变量/final类型的变量/属性和方法信息。</p>
+<p>备注：“Minor GC”是比较轻量的GC，执行时间较短;Major GC是比较重的GC，执行时间较长。</p>
+<p>###垃圾回收的例子</p>
+<p>上图黄点的地方，是进行垃圾回收的地方。</p>
+<p>内存占用过多，需要为新对象分配空间。</p>
+<p>不同的虚拟机在发生GC时采用的策略不同，可能会暂停当前程序的执行。</p>
+<p>大多数垃圾回收的时间我们都可以不需要关注，<br>而是更应该关注垃圾回收所带来的副级效果，它可能会带来一些明显的影响……</p>
+<p>###垃圾回收机制&amp;FPS</p>
+<ul>
+<li>Android系统每隔16ms发出VSYNC信息，触发对UI进行渲染，那么整个过程如果保证在16ms以内，就能达到一个流畅的画面。60FPS。</li>
+<li>如果某一帧操作超过了16ms，就会达不到60FPS，就会让用户感到卡顿。</li>
+<li>(上面提到发生GC时，可能会暂停当前程序执行。)那么，如果UI渲染过程发生GC，导致某一帧绘制时间超过16ms，就达不到60FPS,用户就会觉得卡顿。</li>
+</ul>
+<p>###典型场景：内存泄漏</p>
+<ul>
+<li>应用程序分配了大量不能被回收的对象</li>
+<li>如果分配了大量不能回收的对象，系统可分配内存越来越少了</li>
+<li>就会导致新对象的创建需要的内存不够，就会调用GC</li>
+<li>GC之后再分配，</li>
+<li>这样就有可能导致上面FPS达不到60FPS而造成卡顿</li>
+</ul>
+<p>##内存检测工具</p>
+<p>###三个工具<br>Android Studio提供了下列工具帮助我们分析应用的内存使用情况：</p>
+<ul>
+<li>Memory Monitor</li>
+<li>Allocation Tracker</li>
+<li>Heap Viewer</li>
+</ul>
+<p>###Memory Monitor<br>可选定要监控的“设备”以及“应用”，<br>图中蓝色就是应用所用内存，灰色是空闲内存，峰值就是发生了垃圾回收。</p>
+<p>###Allocation Tracker<br>用于跟踪对象内存分配的工具，追踪已分配的内存、创建的对象、对象的数量和它们所占的内存大小，以及这些对象是在哪被创建出来的等等信息。</p>
+<p>圆环由里到外，是不同包名所占用内存的大小。</p>
+<p>###由Allocation Tracker引入内存抖动的概念</p>
+<ol>
+<li><p>内存抖动是因为在短时间内大量的对象被创建又马上被释放。瞬间产生大量的对象会严重占用Young Generation的内存区域，当达到阀值，剩余空间不够的时候，会触发GC从而导致刚产生的对象又很快被回收。即使每次分配的对象占用了很少的内存，但他们叠加在一起会增加Heap的压力，从而触发更多其他类型的GC。这个操作有可能会影响到帧率（达不到60FPS），并使用户感知到性能问题。</p>
+</li>
+<li><p>Allocation Tracker可以很方便地帮我们发现 内存抖动 的现象。</p>
+</li>
+<li><p>上机：创建一个线程，线程里执行死循环，循环里不停地创建对象。再放两个按钮，一个启动线程，一个停止线程。</p>
+</li>
+</ol>
+<p>###Heap Viewer</p>
+<p>Heap Viewer可以帮我们实时展示应用运行时所有已分配的对象大小、类型信息，<br>它可以帮我们检测内存泄漏的问题。</p>
+<p>上机：正常情况下，旋转屏幕后的Activity能被GC回收掉。但如果有静态变量，就不行了，通过Heap Viewer可以发现这个问题。</p>
+<p>###简单总结这三个工具</p>
+<p>1.Memory Monitor</p>
+<ul>
+<li>方便显示内存使用和GC情况</li>
+<li>快速定位卡顿是否和GC有关</li>
+<li>快速定位Crash是否和内存占用过高有关</li>
+<li>快速定位潜在的内存泄漏问题（那条线会一直增长）</li>
+<li>简单易用</li>
+<li>不能准确定位问题</li>
+</ul>
+<p>2.Allocation Tracker</p>
+<ul>
+<li>定位代码中分配对象的类型、大小、时间、线程、堆栈等信息</li>
+<li>定位内存抖动问题</li>
+<li>配合Heap Viewer一起定位内存泄漏问题</li>
+<li>使用复杂</li>
+</ul>
+<p>3.Heap Viewer</p>
+<ul>
+<li>内存快照信息（实效性好）</li>
+<li>每次GC之后收集一次信息</li>
+<li>查找内存泄漏利器</li>
+<li>使用复杂</li>
+</ul>
+<p>###LeakCanary</p>
+<ul>
+<li>A memory leak detection library for Android and Java</li>
+<li><a href="https://github.com/square/leakcanary" target="_blank" rel="external">https://github.com/square/leakcanary</a></li>
+<li>查找内存泄漏的神器</li>
+</ul>
+<p>由square开发的检测内存泄漏的库。<br>如果发生内存泄漏，会在通知栏发出通知。<br>把LeakCanary添加到我们的项目，只要在Gradle加两句，<br>并在Application类的onCreate方法中install。</p>
+<p>##常用问题以及如何避免</p>
+<p>###单例造成的泄漏</p>
+<p>单例模式很常用，而Android又有不少地方需要用到Context，<br>就有可能出现下面这样的代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public class AppManager&#123;</span><br><span class="line">	private static AppManager instance;</span><br><span class="line">    private Context context;</span><br><span class="line">    private AppManager(Context context)&#123;</span><br><span class="line">    	this.context = context;</span><br><span class="line">    &#125;</span><br><span class="line">    public static AppManager getInstance(Context context)&#123;</span><br><span class="line">    	if(instance!=null)&#123;</span><br><span class="line">        	instance = new AppManager(context);</span><br><span class="line">        &#125;</span><br><span class="line">        return instance;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>问题可能出在调用方，调用方可能不知道我们这里需要的是ApplicationContext，<br>而把Activity传到getInstance(Context context)得到Context的实例,<br>上面的代码中instance是静态变量，在整个应用生命周期都不会被回收，<br>而如果把Activity传进来，那么这个Activity被销毁后也不会被垃圾回收，<br>因为有一个静态变量一直持有它的引用，从而造成内存泄漏。</p>
+<p>###非静态内部类的静态实例造成的泄漏<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">public class MainActivity extends Activity&#123;</span><br><span class="line">	private static TestResource sResource = null;</span><br><span class="line">    @Override</span><br><span class="line">    protected void onCreate(Bundle savedInstanceState)&#123;</span><br><span class="line">    	super.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line">        if(sResource==null)&#123;</span><br><span class="line">        	sResource = new TestResource();</span><br><span class="line">        &#125;</span><br><span class="line">        //...</span><br><span class="line">    &#125;</span><br><span class="line">    class TestResource&#123;</span><br><span class="line">    	//...</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>sResource也是不会被回收的，并且一直持有MainActivity的引用，<br>从而导致MainActivity也无法被垃圾回收。</p>
+<p>###Handler造成的内存泄漏<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">public class MainActivity extends Activity&#123;</span><br><span class="line">	private Handler mHandler = new Handler()&#123;</span><br><span class="line">    	@Override</span><br><span class="line">        public void handleMessage(Message msg)&#123;</span><br><span class="line">        //...</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    @Override</span><br><span class="line">    protected void onCreate(Bundle savedInstanceState)&#123;</span><br><span class="line">    	super.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line">        loadData();</span><br><span class="line">    &#125;</span><br><span class="line">    private void loadData()&#123;</span><br><span class="line">    	//...request</span><br><span class="line">        Message message = Message.obtain();</span><br><span class="line">        mHandler.sendMessage(message);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>上面的写法也是很常见，mHandler其实是会持有MainActivity的引用的，<br>它的存活周期可能会比MainActivity还长，<br>可能MainActivity被销毁了，Handler还没有结束。</p>
+<p>###避免内存泄漏的方法</p>
+<ul>
+<li>尽量不要让静态变量引用Activity</li>
+<li>使用WeakReference</li>
+<li>使用静态内部类来代替内部类</li>
+<li>静态内部类使用弱引用来引用外部类</li>
+<li>在生命周期结束时释放资源</li>
+</ul>
+<p>###减少内存使用</p>
+<ul>
+<li>使用更轻量的数据结构（比如SpareArray代替HashMap）</li>
+<li>避免在onDraw方法中创建对象（onDraw被调用的情况会很多，在里面创建临时对象有可能产生内存抖动）</li>
+<li>对象池（先去查找是否已经有创建了这个对象，Message.obtain()）</li>
+<li>LRUCache</li>
+<li>Bitmap内存复用，压缩（inSampleSize，inBitmap）</li>
+<li>StringBuilder</li>
+</ul>
+<p>#二、视图优化</p>
+<p>###Why 60FPS<br>60FPS或16ms每帧。<br>60FPS ： 1秒显示60帧画面。</p>
+<p>为什么是60FPS？<br>要从大脑说起，它可以将连续的静态画面产生动态的效果，<br>要让大脑能感受到动画的效果，至少要达到10～12帧每秒，<br>如果要让大脑感受频繁动画的效果，至少要24帧每秒，这对大脑来说已经非常连续，<br>当帧率达到60帧每秒，已经是基本上最流畅的了。</p>
+<p>###VSYNC<br>刷新率：硬件刷新频率<br>Android中大部分情况就是屏幕的刷新频率。</p>
+<p>帧率：GPU一秒内可以绘制的帧数。</p>
+<p>帧率和刷新率一起配合，才能保证我们应用完美地渲染出来。</p>
+<p>GPU会源源不断地朝缓冲区中存入图像数据，屏幕也会定期、持续从缓存区中读取图像。</p>
+<p>GPU产生图像的速率是大于屏幕产生图像的速率的。</p>
+<p>###真实例子<br>Google办公室一角的照片。<br>撕裂现象，整张图片有一个割裂的效果。<br>GPU在图例图像数据时，会将数据结果按一行一行将图像数据从上到下写入图像，<br>而屏幕读取时候时，是不知道图像是否已经写入完了，它是整张的区域去读取的，</p>
+<p>###双缓冲机制</p>
+<p>GPU把缓冲数据写入到Back Buffer区域中，<br>而屏幕读取数据则是从Frame Buffer区域读取，<br>Back Buffer会定期地将数据同步到Frame Buffer中，<br>VSYNC可以保证屏幕在读取Frame Buffer时，不会将Back Buffer的数据写入到Frame Buffer，<br>这样就可以解决上面的撕裂现象。</p>
+<p>###帧率&lt;刷新率<br>如果屏幕的刷新频率大于帧率，<br>这样就会出现屏幕两次刷新中，只渲染了一帧的图像，<br>因此我们要保证GPU渲染足够快。</p>
+<hr>
+<p>#四、Bitmap优化</p>
+<p>##复用Bitmap</p>
+<p>###Bitmap decode</p>
+<ul>
+<li>常见的jpg、png、webp是图像的存储格式</li>
+<li>Android中要显示图片必须先经过解码（decode）读取图像的数据到内存中</li>
+<li>BitmapFactory提供了常用的一些decode方法</li>
+<li>图片真正占用的内存大小要看decode之后的数据大小</li>
+</ul>
+<p>1.图像存储格式<br>jpg是有损压缩格式，当图片色彩比较丰富时，压缩效果就比较明显。<br>png是为了取代gif，采用无损压缩格式。<br>webp是Google近几年推出的格式，可以在采用无损压缩的情况下，极大地压缩体积。</p>
+<p>2.解码<br>解码就是将图像数据读取到内存，然后转换成GPU能读取的格式。</p>
+<p>3.Android使用BitmapFactory进行解码</p>
+<p>###Bitmap memory<br>位图解码后的大小，在Android不同版本，其实是有所不同的。</p>
+<p><strong>&lt;=2.3.3(api 10)</strong></p>
+<ul>
+<li>Bitmap解码之后的数据存储在Native Memory中</li>
+<li>手动调用Recycle回收</li>
+</ul>
+<p>也就是我们要手动调用Recycle方法去回收这块内存，<br>因为这块内存是在C++那一层的，没有Java的垃圾回收机制。</p>
+<p><strong>&gt;=3.0(api 11)</strong></p>
+<ul>
+<li>Bitmap解码之后的数据存储在Dalvik heap中</li>
+<li>Dalvik自动回收</li>
+</ul>
+<p>这里就有了垃圾回收机制，自动帮我们判断Bitmap内存的情况。</p>
+<p>###Re-using Bitmaps<br>Bitmap成为可能导致内存抖动的元凶。</p>
+<p>从上图可以，每当要一个Bitmap对象要创建，<br>因为它需要一块连续的内存空间才能显示，<br>如果当时不够内存，系统就进行垃圾回收腾出空间，<br>一旦频繁产生Bitmap，就有可能产生内存抖动，造成卡顿。<br>那么，如何避免这种现象呢？</p>
+<p>使用对象池去复用对象，这样就不用系统每次分配一块新的内存。</p>
+<p>所谓对象池（Object pool），<br>其实就是一块内存缓冲区间，程序启动时预先向Java虚拟机申请一块区域，<br>用这块区域当缓冲区间来当对象池使用。</p>
+<p>接下来所有某一类型对象的创建，都是放到这块内存中，<br>一旦这块内存被占满，新来的会按照算法淘汰掉老的、不用的旧对象，<br>这样就避免了在创建信的对象区域。</p>
+<p>好处：避免了JVM再进行内存分配及可能产生的垃圾回收。</p>
+<p>例子：<br>连续显示好几张jpg图片，具体看图。（13：58）</p>
+<p>在Android中实现这种效果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mBitmapOptions.inBitmap = mCurrentBitmap</span><br><span class="line">//will reuse the mCurrentBitmap</span><br><span class="line">//(or not,depending on if in Bitmap is set)</span><br><span class="line">mCurrentBitmap = BitmapFactory.decodeFile(fileName,mBitmapOptions)</span><br></pre></td></tr></table></figure></p>
+<p>上面写法的局限性，在api 11-18，<br>上面的写法复用的Bitmap必须宽高一样才能被复用，<br>否则会失效。<br>api 19+后就做了比较好的改进，不再强制要求宽高严格相等，<br>只要被复用的Bitmap的宽高比要复用它空间的空间大就可以了。</p>
+<p>我们在复用Bitmap时，不但要考虑宽高，<br>还要考虑像素格式是否一致，如果不一致，也是没法复用的。<br>比较好的做法就是在对象池中分类，提供各种像素格式的对象。</p>
+<p>第三方库：glide。</p>
+<p>##预压缩Bitmap</p>
+<p>我获取的图片很大，但我其实只是需要一个缩略图。</p>
+<p>截图可见（2：20），压缩后可以极大地节约内存。</p>
+<p>Android提供了API做这种事情，<br>其中一个就是createSacledBitmap(inBmp，64,128)，<br>缺陷就是Bitmap必须已经加载到内存，这样意义就不大了。</p>
+<p>另一个方法(比较简单粗暴)：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mBitmapOptions.inSampleSize = 4;</span><br><span class="line">//will load&amp;resize the image to be 1/inSampleSize dimensions</span><br><span class="line">mCurrentBitmap = BitmapFactory.decodeFile(fileName,mBitmapOptions);</span><br></pre></td></tr></table></figure></p>
+<p>上面这样，就会缩小到原图的1/4大小。<br>工作原理就是类似与每4个像素，就只取1个像素(7:00)。</p>
+<p>又一种方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mBitmapOptions.inScaled = true;</span><br><span class="line">mBitmapOptions.inDensity = srcWidth;</span><br><span class="line">mBitmapOptions.inTargetDensity = dstWidth;</span><br><span class="line">//will load &amp; resize the image to be 1/inSampleSize dimensions</span><br><span class="line">mCurrentBitmap = BitmapFactory.decodeResources(getResources(),mImageIDs,mBitmapOptions);</span><br></pre></td></tr></table></figure></p>
+<p>bimapfactory.cpp<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">    if(inScaled)&#123;</span><br><span class="line">        if(inDensity!=0&amp;&amp;inTargetDensity!=0&amp;&amp;inDensity!=inScreenDensity)&#123;</span><br><span class="line">        	scale = (float)inTargetDensity/inDensity;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>通常我们会把inSampleSize和“inScaled”/“inDensity”这两个属性结合起来使用，<br>先缩小，缩放。如下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mBitmapOptions.inScaled = true;</span><br><span class="line">mBitmapOptions.inSampleSize = 4;</span><br><span class="line">mBitmapOptions.inDensity = srcWidth;</span><br><span class="line">mBitmapOptions.inTargetDensity = dstWidth*mBitmap.imSampleSize;</span><br><span class="line"></span><br><span class="line">//will load&amp;resize the image to be 1/inSampleSize dimensions</span><br><span class="line">mCurrentBitmap = BitmapFactory.decodeResources(filename,mBitmapOptions);</span><br></pre></td></tr></table></figure></p>
+<p>复杂的缩小是在小图上做的，比直接缩小原图效率高。</p>
+<p>那么，我们如何去获取原图的宽高呢？<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mBitmapOptions.inJustDecodeBounds = true;</span><br><span class="line">BitmapFactory.decodeFile(filename,mBitmapOptions);</span><br><span class="line">srcWidth = mBitmapOptions.outWidth;</span><br><span class="line">srcHeight = BitmapOptions.outHeight;</span><br></pre></td></tr></table></figure></p>
+<p>代码片段展示：（13：54）</p>
+<p>##减小占用字节</p>
+<p>还可以通过减少每隔像素的字节数来达到减少内存占用的目的。<br>通过尽量减少Bitmap内存占用，优化性能。</p>
+<p>不管什么格式的图像，都要经过解码才能在屏幕上显示，<br>PNG - Decompress - Use on the CPU - CPU。</p>
+<p>PNG格式，每个像素需要4个字节，ARGB，</p>
+<p>##LRUCache介绍</p>
+<p>#五、其他优化<br>杂七杂八的知识点</p>
+<p>##Profiling与Lint</p>
+<p>###Method Profiling<br>Profiling可以帮助我们在程序运行时，<br>每个方法所消耗的时间。</p>
+<p>每种颜色对应不同的方法，通过颜色可见哪个方法占用时间最长或占用CPU最多。</p>
+<p>上机点击一个按钮，启动下面的<code>makeCpuBusy()</code>方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">private void makeCpuBusy()&#123;</span><br><span class="line">	Integer sum = 0;</span><br><span class="line">    for(int i=0;i&lt;10000;i++)&#123;</span><br><span class="line">    	System.out.println(&quot;-----&quot;+i);</span><br><span class="line">        sum += i;</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(&quot;sum&quot;+sum);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>就是不让CPU闲着，让它一直在打印，然后通过Profiling进行观察。<br>打开Profiling最简单的方法就是打开Android Device Monitor，<br>选中我们应用的进程，上面会有个“start Method Profiling”的按钮。<br>点击下方列表中“Incl Cpu Time”的栏目进行排序，<br>即可找出那些比较耗费Cpu资源的方法。<br>找到方法后，就能对症下药地改进了。</p>
+<p>###Lint Tool</p>
+<p>Lint工具会对Java代码做一些检查，检测出程序潜在的问题，<br>检查可用性、安全性、国际化等等问题，<br>我们还可以配置Lint工具，让其只检查我们关心的部分，例如性能问题。</p>
+<p>使用Lint的三种方式：</p>
+<ol>
+<li>Release Builds （如果我们打Release包，Gradle会默认启用Lint检查，以Log形式告诉我们）</li>
+<li>Command Line （可以用命令行使用Lint）</li>
+<li>Manually （比较常用的方式，在Android Studio手动去使用Lint工具）</li>
+</ol>
+<p>使用Lint工具，在Android Studio中点击上方”Analyze”菜单，<br>选中”Inspect Code”，就可以了。<br>视频中是针对整个项目进行分析。</p>
+<p>打开Android Studio的settings，然后选“Inspections”，<br>可以对Lint工具进行配置，里面有一堆Lint的配置选项。</p>
+<p>##使用轻量容器</p>
+<p>Profiling和Lint都是在写完代码后去检查，其实还可以写代码时检查。</p>
+<p>###Android-Specific containers</p>
+<p>下面两个表格只是引子，做个参考。</p>
+<p><strong>Primitive Sizes</strong></p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>所占字节</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>boolean</td>
+<td>8bits</td>
+</tr>
+<tr>
+<td>int</td>
+<td>32bits</td>
+</tr>
+<tr>
+<td>float</td>
+<td>32bits</td>
+</tr>
+<tr>
+<td>long</td>
+<td>64bits</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Object Sizes</strong></p>
+<table>
+<thead>
+<tr>
+<th>基本类型</th>
+<th>包装类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>boolean</td>
+<td>java.lang.Boolean</td>
+</tr>
+<tr>
+<td>int</td>
+<td>java.lang.Integer</td>
+</tr>
+<tr>
+<td>float</td>
+<td>java.lang.Float</td>
+</tr>
+</tbody>
+</table>
+<p>###Auto-Boxing<br>例如HashMap中，必须传入的是对象，<br>Java会有自动装箱功能，将基本类型转为对应的包装类型。</p>
+<p>包装类型比基本类型所占空间要大，不注意的话，<br>就可以造成资源的浪费。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">int total = 0;</span><br><span class="line">for(int i=0;i&lt;100;i++)&#123;</span><br><span class="line">	total+=i;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Integer total = 0;</span><br><span class="line">for(int i=0;i&lt;100;i++)&#123;</span><br><span class="line">	total+=i;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>上面代码中，下面代码占用内存比上面的多得多。</p>
+<p>我们可以通过之前学的Allocation Tracker观察到这种情况。</p>
+<p>为了避免上面提到的使用HashMap过程中自动装箱、拆箱带来的内存占用更多的问题，<br>可以不用Java的HashMap，而去使用Android提供的容器。</p>
+<p>###NoBoxing containers：</p>
+<table>
+<thead>
+<tr>
+<th>容器</th>
+<th>键值对类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HashMap</td>
+<td><code>&lt;obj,obj&gt;</code></td>
+</tr>
+<tr>
+<td>SparseBoolMap</td>
+<td><code>&lt;bool,obj&gt;</code></td>
+</tr>
+<tr>
+<td>SparseIntMap</td>
+<td><code>&lt;int,obj&gt;</code></td>
+</tr>
+<tr>
+<td>SparseLongMap</td>
+<td><code>&lt;long,obj&gt;</code></td>
+</tr>
+<tr>
+<td>LongSparseMap</td>
+<td><code>&lt;long,obj&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<p>上面那些没有Autoboxing的容器，其实是基于ArrayMaps基础上实现的。<br>ArrayMaps它的key所占的空间比HashMap的key空间小很多。</p>
+<p>###SparseArray</p>
+<p>使用SparseArray最大的好处，就是我们可以用索引来遍历，<br>而不需要像HashMap那样用iterator来遍历。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">//ArrayMap</span><br><span class="line">   for(int i=0;i&lt;map.size();i++)&#123;</span><br><span class="line"> 	  Object keyObj = map.keyAt(i);</span><br><span class="line"> 	  Object valObj = map.valueAt(i);</span><br><span class="line">   &#125;</span><br><span class="line">   </span><br><span class="line">   //HashMap</span><br><span class="line">   for(Iterator it = map.iteraotr;it.hasNext;)&#123;</span><br><span class="line"> 	  Object obj = it.next();</span><br><span class="line"> 	  ...</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></p>
+<p>Android提供了一系列SparseArray</p>
+<ul>
+<li>android.util.SparseArray</li>
+<li>android.util.SparseBooleanArray</li>
+<li>android.util.SparseIntArray</li>
+<li>android.util.SparseLongArray</li>
+</ul>
+<p>但并不是什么时候都适合用SparseArray的，<br>使用SparseArray最主要适合下面两个场景：</p>
+<ol>
+<li>对象比较少，一般少于1000个（会频繁对容器内元素进行访问，越频繁越显得高效）</li>
+<li>容器中嵌套容器（例如HashMap中又需要有HashMap的情况）</li>
+</ol>
+<p>###HashMap memory</p>
+<p>HashMap的内存分配情况：<br>HashMap在创建时首先会分配比较大的数组空间，<br>用来存放key的hash值。即使它没有存放任何元素，<br>这块区域其实已经浪费了空间了。</p>
+<p>而ArrayMap则没有这样的情况。</p>
+<p>总之，容器方面就是使用ArrayMap和SparseMap。</p>
+<p>##枚举的使用</p>
+<p>我们要注意枚举的使用，它对我们应用的影响主要有两个方面：</p>
+<ol>
+<li>体积的影响</li>
+<li>运行时对性能的影响</li>
+</ol>
+<p>例如如果三个变量，用int类型增加124字节，而用枚举则是用int类型的13倍。<br>Android启动时是很关注dex的大小的，dex体积越大，所占内存更高。</p>
+<p>另外，使用枚举，运行时所需内存也会大大增多。</p>
+<p>枚举的好处，就是可以减少类型错误，不需要我们额外进行检查，<br>可以让编译器帮我们去检查。</p>
+<p>Android的Support包提供了注解，让int类型具有枚举的效果：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">@Retention(CLASS)</span><br><span class="line">@IntDef(&#123;</span><br><span class="line">   NAVIGATION_MODE_STANDARD,</span><br><span class="line">   NAVIGATION_MODE_LIST,</span><br><span class="line">   NAVIGATION_MODE_TABS</span><br><span class="line">   &#125;)</span><br><span class="line">   </span><br><span class="line">   public @interface NavigationMode&#123;&#125;</span><br><span class="line">   public static final int NAVIGATION_MODE_STANDARD = 0;</span><br><span class="line">   public static final int NAVIGATION_MODE_LIST = 1;</span><br><span class="line">   public static final int NAVIGATION_MODE_TABS = 2;</span><br><span class="line">   ...</span><br><span class="line">   public abstract void setNavigationMode(@NavigationMode int mode)</span><br><span class="line">   @NavigationMode</span><br><span class="line">   public abstract int getNavigationMode();</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://linww.in/2016/04/22/Geekband Android性能优化/" data-id="cinbw1cd90002a296t5cdi77a" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/04/22/2.“智慧北京”第二天 笔记/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Articles récents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/04/22/Geekband Android性能优化/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/22/2.“智慧北京”第二天 笔记/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/22/1. “智慧北京”第一天 笔记/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2016/04/22/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 Linww<br>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
