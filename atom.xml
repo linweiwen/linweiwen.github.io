@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://linww.in/"/>
-  <updated>2016-03-12T15:54:14.581Z</updated>
+  <updated>2016-04-22T15:47:39.178Z</updated>
   <id>http://linww.in/</id>
   
   <author>
@@ -16,13 +16,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>Geekband Android性能优化</title>
     <link href="http://linww.in/2016/04/22/Geekband%20Android%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
     <id>http://linww.in/2016/04/22/Geekband Android性能优化/</id>
-    <published>2016-04-22T15:44:36.580Z</published>
-    <updated>2016-03-12T15:54:14.581Z</updated>
+    <published>2016-04-22T15:47:39.178Z</published>
+    <updated>2016-04-22T15:47:39.178Z</updated>
     
-    <content type="html">&lt;p&gt;#Geekband Android性能优化&lt;br&gt;[TOC]&lt;/p&gt;
+    <content type="html">&lt;p&gt;[TOC]&lt;/p&gt;
 &lt;p&gt;#一、内存优化&lt;/p&gt;
 &lt;p&gt;##垃圾回收机制&lt;/p&gt;
 &lt;p&gt;###什么是垃圾回收&lt;/p&gt;
@@ -361,13 +361,14 @@
     
     <summary type="html">
     
-      &lt;p&gt;#Geekband Android性能优化&lt;br&gt;[TOC]&lt;/p&gt;
+      &lt;p&gt;[TOC]&lt;/p&gt;
 &lt;p&gt;#一、内存优化&lt;/p&gt;
 &lt;p&gt;##垃圾回收机制&lt;/p&gt;
 &lt;p&gt;###什么是垃圾回收&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;麦卡锡John McCarthy 1959年提出&lt;/li&gt;
-&lt;li&gt;首先在Lisp语言实
+&lt;li&gt;首先在Lisp语言实现垃圾回收机制&lt;/li&gt;
+&lt;li&gt;对比C/C++这
     
     </summary>
     
@@ -375,13 +376,13 @@
   </entry>
   
   <entry>
-    <title></title>
+    <title>“智慧北京”第二天 笔记</title>
     <link href="http://linww.in/2016/04/22/2.%E2%80%9C%E6%99%BA%E6%85%A7%E5%8C%97%E4%BA%AC%E2%80%9D%E7%AC%AC%E4%BA%8C%E5%A4%A9%20%E7%AC%94%E8%AE%B0/"/>
     <id>http://linww.in/2016/04/22/2.“智慧北京”第二天 笔记/</id>
-    <published>2016-04-22T15:44:25.928Z</published>
-    <updated>2016-03-20T16:20:12.366Z</updated>
+    <published>2016-04-22T15:47:14.806Z</published>
+    <updated>2016-04-22T15:47:14.806Z</updated>
     
-    <content type="html">&lt;h1 id=&quot;“智慧北京”第二天-笔记&quot;&gt;&lt;a href=&quot;#“智慧北京”第二天-笔记&quot; class=&quot;headerlink&quot; title=&quot;“智慧北京”第二天 笔记&quot;&gt;&lt;/a&gt;“智慧北京”第二天 笔记&lt;/h1&gt;&lt;p&gt;[TOC]&lt;/p&gt;
+    <content type="html">&lt;p&gt;[TOC]&lt;/p&gt;
 &lt;h2 id=&quot;第一天总结-amp-今天内容&quot;&gt;&lt;a href=&quot;#第一天总结-amp-今天内容&quot; class=&quot;headerlink&quot; title=&quot;第一天总结 &amp;amp; 今天内容&quot;&gt;&lt;/a&gt;第一天总结 &amp;amp; 今天内容&lt;/h2&gt;&lt;p&gt;总结的那些知识点就省略了，&lt;br&gt;记得不要把自己的思维局限在老师讲的项目，&lt;br&gt;要把它扩展出去，多观察其他实际应用中类似的功能。&lt;/p&gt;
 &lt;p&gt;第二天就是实现底部五个Tab的功能和实现一些侧边栏具体栏目的功能。&lt;/p&gt;
 &lt;h2 id=&quot;主页面框架-amp-RadioButton&quot;&gt;&lt;a href=&quot;#主页面框架-amp-RadioButton&quot; class=&quot;headerlink&quot; title=&quot;主页面框架 &amp;amp; RadioButton&quot;&gt;&lt;/a&gt;主页面框架 &amp;amp; RadioButton&lt;/h2&gt;&lt;p&gt;主页面 = 下面底部栏 + 上面具体栏目内容。&lt;/p&gt;
@@ -396,8 +397,8 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;“智慧北京”第二天-笔记&quot;&gt;&lt;a href=&quot;#“智慧北京”第二天-笔记&quot; class=&quot;headerlink&quot; title=&quot;“智慧北京”第二天 笔记&quot;&gt;&lt;/a&gt;“智慧北京”第二天 笔记&lt;/h1&gt;&lt;p&gt;[TOC]&lt;/p&gt;
-&lt;h2 id=&quot;第一天总结-amp-今天
+      &lt;p&gt;[TOC]&lt;/p&gt;
+&lt;h2 id=&quot;第一天总结-amp-今天内容&quot;&gt;&lt;a href=&quot;#第一天总结-amp-今天内容&quot; class=&quot;headerlink&quot; title=&quot;第一天总结 &amp;amp; 今天内容&quot;&gt;&lt;/a&gt;第一天总结 &amp;amp; 今天内容&lt;/h2&gt;&lt;p&gt;总结的那些
     
     </summary>
     
@@ -405,13 +406,13 @@
   </entry>
   
   <entry>
-    <title></title>
+    <title>“智慧北京”第一天 笔记</title>
     <link href="http://linww.in/2016/04/22/1.%20%E2%80%9C%E6%99%BA%E6%85%A7%E5%8C%97%E4%BA%AC%E2%80%9D%E7%AC%AC%E4%B8%80%E5%A4%A9%20%E7%AC%94%E8%AE%B0/"/>
     <id>http://linww.in/2016/04/22/1. “智慧北京”第一天 笔记/</id>
-    <published>2016-04-22T15:44:25.924Z</published>
-    <updated>2016-03-20T14:47:19.590Z</updated>
+    <published>2016-04-22T15:46:54.121Z</published>
+    <updated>2016-04-22T15:46:54.121Z</updated>
     
-    <content type="html">&lt;h1 id=&quot;“智慧北京”第一天-笔记&quot;&gt;&lt;a href=&quot;#“智慧北京”第一天-笔记&quot; class=&quot;headerlink&quot; title=&quot;“智慧北京”第一天 笔记&quot;&gt;&lt;/a&gt;“智慧北京”第一天 笔记&lt;/h1&gt;&lt;p&gt;[TOC]&lt;/p&gt;
+    <content type="html">&lt;p&gt;[TOC]&lt;/p&gt;
 &lt;h2 id=&quot;一、项目介绍&quot;&gt;&lt;a href=&quot;#一、项目介绍&quot; class=&quot;headerlink&quot; title=&quot;一、项目介绍&quot;&gt;&lt;/a&gt;一、项目介绍&lt;/h2&gt;&lt;h3 id=&quot;黑马项目的介绍&quot;&gt;&lt;a href=&quot;#黑马项目的介绍&quot; class=&quot;headerlink&quot; title=&quot;黑马项目的介绍&quot;&gt;&lt;/a&gt;黑马项目的介绍&lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;手机卫士：最重要，不能算是一个项目，但却是把知识点集合的一个大Demo，敲得熟练那么Android基础和敲代码的能力就没问题了。但因为这种产品不赚钱，所以不能拿去面试。&lt;/li&gt;
 &lt;li&gt;智慧北京：第二重要，从实际项目抽取而成 。&lt;/li&gt;
@@ -515,8 +516,8 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;“智慧北京”第一天-笔记&quot;&gt;&lt;a href=&quot;#“智慧北京”第一天-笔记&quot; class=&quot;headerlink&quot; title=&quot;“智慧北京”第一天 笔记&quot;&gt;&lt;/a&gt;“智慧北京”第一天 笔记&lt;/h1&gt;&lt;p&gt;[TOC]&lt;/p&gt;
-&lt;h2 id=&quot;一、项目介绍&quot;&gt;&lt;a h
+      &lt;p&gt;[TOC]&lt;/p&gt;
+&lt;h2 id=&quot;一、项目介绍&quot;&gt;&lt;a href=&quot;#一、项目介绍&quot; class=&quot;headerlink&quot; title=&quot;一、项目介绍&quot;&gt;&lt;/a&gt;一、项目介绍&lt;/h2&gt;&lt;h3 id=&quot;黑马项目的介绍&quot;&gt;&lt;a href=&quot;#黑马项目的介绍&quot; class=&quot;h
     
     </summary>
     
