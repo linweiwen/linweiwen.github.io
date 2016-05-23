@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://linww.in/"/>
-  <updated>2016-05-23T12:23:54.272Z</updated>
+  <updated>2016-05-23T12:30:17.173Z</updated>
   <id>http://linww.in/</id>
   
   <author>
@@ -20,11 +20,9 @@
     <link href="http://linww.in/2016/05/22/%E6%96%87%E7%AB%A0%E7%9A%84%E5%8F%82%E8%80%83%E6%A0%BC%E5%BC%8F/"/>
     <id>http://linww.in/2016/05/22/文章的参考格式/</id>
     <published>2016-05-21T16:00:00.000Z</published>
-    <updated>2016-05-23T12:23:54.272Z</updated>
+    <updated>2016-05-23T12:30:17.173Z</updated>
     
-    <content type="html">&lt;p&gt;##Getting Started&lt;/p&gt;
-&lt;p&gt;###Totally new to Android? Start here.&lt;/p&gt;
-&lt;ul&gt;
+    <content type="html">&lt;h2 id=&quot;Getting-Started&quot;&gt;&lt;a href=&quot;#Getting-Started&quot; class=&quot;headerlink&quot; title=&quot;Getting Started&quot;&gt;&lt;/a&gt;Getting Started&lt;/h2&gt;&lt;h3 id=&quot;Totally-new-to-Android-Start-here&quot;&gt;&lt;a href=&quot;#Totally-new-to-Android-Start-here&quot; class=&quot;headerlink&quot; title=&quot;Totally new to Android? Start here.&quot;&gt;&lt;/a&gt;Totally new to Android? Start here.&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;Getting Started as a Developer (New to programming?)&lt;/li&gt;
 &lt;li&gt;Getting Started with Android (Detailed Post With Many Links)&lt;/li&gt;
 &lt;li&gt;Setting up Android Studio (Installation Slides) or Setting up IntelliJ IDEA&lt;/li&gt;
@@ -40,15 +38,12 @@
 &lt;li&gt;Android Learning Resources&lt;/li&gt;
 &lt;li&gt;Keeping Updated with Android (Podcasts, blogs, newsletters)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;###Using Eclipse? See below.&lt;/p&gt;
-&lt;ul&gt;
+&lt;h3 id=&quot;Using-Eclipse-See-below&quot;&gt;&lt;a href=&quot;#Using-Eclipse-See-below&quot; class=&quot;headerlink&quot; title=&quot;Using Eclipse? See below.&quot;&gt;&lt;/a&gt;Using Eclipse? See below.&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;Setting up Eclipse ADT (Detailed Slides)&lt;/li&gt;
 &lt;li&gt;Developing our First App Using Eclipse ADT (Step-by-Step Todo App)&lt;/li&gt;
 &lt;li&gt;Troubleshooting Eclipse Issues (Running into eclipse problems?)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;##Structure&lt;/p&gt;
-&lt;p&gt;###Exploring the foundations of app development:&lt;/p&gt;
-&lt;ul&gt;
+&lt;h2 id=&quot;Structure&quot;&gt;&lt;a href=&quot;#Structure&quot; class=&quot;headerlink&quot; title=&quot;Structure&quot;&gt;&lt;/a&gt;Structure&lt;/h2&gt;&lt;h3 id=&quot;Exploring-the-foundations-of-app-development&quot;&gt;&lt;a href=&quot;#Exploring-the-foundations-of-app-development&quot; class=&quot;headerlink&quot; title=&quot;Exploring the foundations of app development:&quot;&gt;&lt;/a&gt;Exploring the foundations of app development:&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;Using Context (What is context and how is it used?)&lt;/li&gt;
 &lt;li&gt;Android Directory Structure (Files and Folders for Android apps)&lt;/li&gt;
 &lt;li&gt;Organizing your Source Files (Cleaning up source of your apps)&lt;/li&gt;
@@ -60,9 +55,7 @@
 &lt;li&gt;App Permissions (How to request the permissions you need)&lt;/li&gt;
 &lt;li&gt;Managing Runtime Permissions with PermissionsDispatcher&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;##Views and Layouts&lt;/p&gt;
-&lt;p&gt;###Exploring the gritty details of views, layout, styling and common UI patterns:&lt;/p&gt;
-&lt;ul&gt;
+&lt;h2 id=&quot;Views-and-Layouts&quot;&gt;&lt;a href=&quot;#Views-and-Layouts&quot; class=&quot;headerlink&quot; title=&quot;Views and Layouts&quot;&gt;&lt;/a&gt;Views and Layouts&lt;/h2&gt;&lt;h3 id=&quot;Exploring-the-gritty-details-of-views-layout-styling-and-common-UI-patterns&quot;&gt;&lt;a href=&quot;#Exploring-the-gritty-details-of-views-layout-styling-and-common-UI-patterns&quot; class=&quot;headerlink&quot; title=&quot;Exploring the gritty details of views, layout, styling and common UI patterns:&quot;&gt;&lt;/a&gt;Exploring the gritty details of views, layout, styling and common UI patterns:&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;Constructing View Layouts (How to layout views)&lt;/li&gt;
 &lt;li&gt;Defining Views and their Attributes (Gravity, Margin, Padding, etc)&lt;/li&gt;
 &lt;li&gt;Working with the TextView (Properties, Drawables, Custom Fonts)&lt;/li&gt;
@@ -73,8 +66,7 @@
 &lt;li&gt;Working with the WebView&lt;/li&gt;
 &lt;li&gt;Working with the ScrollView&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;###Designing and Styling Views&lt;/p&gt;
-&lt;ul&gt;
+&lt;h3 id=&quot;Designing-and-Styling-Views&quot;&gt;&lt;a href=&quot;#Designing-and-Styling-Views&quot; class=&quot;headerlink&quot; title=&quot;Designing and Styling Views&quot;&gt;&lt;/a&gt;Designing and Styling Views&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;Drawables (and how to polish UI views)&lt;/li&gt;
 &lt;li&gt;Styles and Themes (Consolidating view styles)&lt;/li&gt;
 &lt;li&gt;Animations (Animating views, layouts, activities and more)&lt;/li&gt;
@@ -91,8 +83,7 @@
 &lt;li&gt;Design Support Library (Material Design Library)&lt;/li&gt;
 &lt;li&gt;Chrome Custom Tabs&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;###AdapterViews&lt;/p&gt;
-&lt;ul&gt;
+&lt;h3 id=&quot;AdapterViews&quot;&gt;&lt;a href=&quot;#AdapterViews&quot; class=&quot;headerlink&quot; title=&quot;AdapterViews&quot;&gt;&lt;/a&gt;AdapterViews&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;Using an ArrayAdapter with ListView (with custom list items)&lt;/li&gt;
 &lt;li&gt;Endless Scrolling with AdapterViews and RecyclerView (Infinite pagination)&lt;/li&gt;
 &lt;li&gt;Implementing Pull to Refresh Guide&lt;/li&gt;
@@ -102,16 +93,14 @@
 &lt;li&gt;Heterogenous Layouts inside RecyclerView (Android 5.0)&lt;/li&gt;
 &lt;li&gt;Using the CardView (Android 5.0)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;###Custom Views&lt;/p&gt;
-&lt;ul&gt;
+&lt;h3 id=&quot;Custom-Views&quot;&gt;&lt;a href=&quot;#Custom-Views&quot; class=&quot;headerlink&quot; title=&quot;Custom Views&quot;&gt;&lt;/a&gt;Custom Views&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;Basic Painting with Views (Simple drawing app tutorial)&lt;/li&gt;
 &lt;li&gt;Defining Custom Views (Needs Attention)&lt;/li&gt;
 &lt;li&gt;Extending SurfaceView (Needs Attention)&lt;/li&gt;
 &lt;li&gt;Drawing with OpenGL and GLSurfaceView (Needs Attention)&lt;/li&gt;
 &lt;li&gt;Building a Custom Animated Progress Bar (Exercise)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;##Interaction&lt;/p&gt;
-&lt;p&gt;Exploring how to allow user interaction and navigation within an app:&lt;/p&gt;
+&lt;h2 id=&quot;Interaction&quot;&gt;&lt;a href=&quot;#Interaction&quot; class=&quot;headerlink&quot; title=&quot;Interaction&quot;&gt;&lt;/a&gt;Interaction&lt;/h2&gt;&lt;p&gt;Exploring how to allow user interaction and navigation within an app:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;View Event Listeners (Clicks, Key Presses, Updates)&lt;/li&gt;
 &lt;li&gt;Creating Custom Listeners (Defining, setting and triggering events)&lt;/li&gt;
@@ -236,11 +225,7 @@ Open Source projects for Android Development
     
     <summary type="html">
     
-      &lt;p&gt;##Getting Started&lt;/p&gt;
-&lt;p&gt;###Totally new to Android? Start here.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Getting Started as a Developer (New to programming?)&lt;/li&gt;
-&lt;l
+      &lt;h2 id=&quot;Getting-Started&quot;&gt;&lt;a href=&quot;#Getting-Started&quot; class=&quot;headerlink&quot; title=&quot;Getting Started&quot;&gt;&lt;/a&gt;Getting Started&lt;/h2&gt;&lt;h3 id=&quot;Totally-new-t
     
     </summary>
     
