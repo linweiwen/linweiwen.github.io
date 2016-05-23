@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>HelloWorld</title>
+  <title>Linww | 第三人称</title>
   
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://linww.in/"/>
-  <updated>2016-04-22T16:02:26.614Z</updated>
+  <updated>2016-05-23T12:23:54.272Z</updated>
   <id>http://linww.in/</id>
   
   <author>
@@ -16,11 +16,245 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>辨析 Sass 中的 Map 和 List</title>
-    <link href="http://linww.in/2015/10/21/demo/"/>
-    <id>http://linww.in/2015/10/21/demo/</id>
-    <published>2015-10-21T02:34:12.000Z</published>
-    <updated>2016-04-22T16:02:26.614Z</updated>
+    <title>CodePath目录</title>
+    <link href="http://linww.in/2016/05/22/%E6%96%87%E7%AB%A0%E7%9A%84%E5%8F%82%E8%80%83%E6%A0%BC%E5%BC%8F/"/>
+    <id>http://linww.in/2016/05/22/文章的参考格式/</id>
+    <published>2016-05-21T16:00:00.000Z</published>
+    <updated>2016-05-23T12:23:54.272Z</updated>
+    
+    <content type="html">&lt;p&gt;##Getting Started&lt;/p&gt;
+&lt;p&gt;###Totally new to Android? Start here.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Getting Started as a Developer (New to programming?)&lt;/li&gt;
+&lt;li&gt;Getting Started with Android (Detailed Post With Many Links)&lt;/li&gt;
+&lt;li&gt;Setting up Android Studio (Installation Slides) or Setting up IntelliJ IDEA&lt;/li&gt;
+&lt;li&gt;Installing a Faster Emulator (Genymotion Guide)&lt;/li&gt;
+&lt;li&gt;Architecture of Mobile Apps (Concept Slides)&lt;/li&gt;
+&lt;li&gt;Mobile Screen Archetypes (Common mobile app screen categories)&lt;/li&gt;
+&lt;li&gt;Troubleshooting Common Issues (Running into problems?)&lt;/li&gt;
+&lt;li&gt;Developing our First App Using Android Studio (Step-by-Step Todo App)&lt;/li&gt;
+&lt;li&gt;Todo App Guide (Todo App steps in guide format)&lt;/li&gt;
+&lt;li&gt;Sample Android Apps (Code repositories)&lt;/li&gt;
+&lt;li&gt;Free Android Curriculum (Additional resources)&lt;/li&gt;
+&lt;li&gt;Google Android Glossary (Defining Common Terms)&lt;/li&gt;
+&lt;li&gt;Android Learning Resources&lt;/li&gt;
+&lt;li&gt;Keeping Updated with Android (Podcasts, blogs, newsletters)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;###Using Eclipse? See below.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Setting up Eclipse ADT (Detailed Slides)&lt;/li&gt;
+&lt;li&gt;Developing our First App Using Eclipse ADT (Step-by-Step Todo App)&lt;/li&gt;
+&lt;li&gt;Troubleshooting Eclipse Issues (Running into eclipse problems?)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;##Structure&lt;/p&gt;
+&lt;p&gt;###Exploring the foundations of app development:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Using Context (What is context and how is it used?)&lt;/li&gt;
+&lt;li&gt;Android Directory Structure (Files and Folders for Android apps)&lt;/li&gt;
+&lt;li&gt;Organizing your Source Files (Cleaning up source of your apps)&lt;/li&gt;
+&lt;li&gt;Architecture of Android Apps (Understanding how apps should be structured)&lt;/li&gt;
+&lt;li&gt;Understanding App Resources (Understanding Strings and Resources)&lt;/li&gt;
+&lt;li&gt;Understanding the Activity Lifecycle (How does an activity work?)&lt;/li&gt;
+&lt;li&gt;Handling Configuration Changes (Screen Rotation)&lt;/li&gt;
+&lt;li&gt;Migrating to the AppCompat Library (Using the Support Libraries)&lt;/li&gt;
+&lt;li&gt;App Permissions (How to request the permissions you need)&lt;/li&gt;
+&lt;li&gt;Managing Runtime Permissions with PermissionsDispatcher&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;##Views and Layouts&lt;/p&gt;
+&lt;p&gt;###Exploring the gritty details of views, layout, styling and common UI patterns:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Constructing View Layouts (How to layout views)&lt;/li&gt;
+&lt;li&gt;Defining Views and their Attributes (Gravity, Margin, Padding, etc)&lt;/li&gt;
+&lt;li&gt;Working with the TextView (Properties, Drawables, Custom Fonts)&lt;/li&gt;
+&lt;li&gt;Working with the EditText (Properties)&lt;/li&gt;
+&lt;li&gt;Working with the ImageView (Drawables, Size and Scale, Density, Raw Bitmaps)&lt;/li&gt;
+&lt;li&gt;Working with Input Views (Spinner, RatingBar, etc)&lt;/li&gt;
+&lt;li&gt;Working with the Soft Keyboard&lt;/li&gt;
+&lt;li&gt;Working with the WebView&lt;/li&gt;
+&lt;li&gt;Working with the ScrollView&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;###Designing and Styling Views&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Drawables (and how to polish UI views)&lt;/li&gt;
+&lt;li&gt;Styles and Themes (Consolidating view styles)&lt;/li&gt;
+&lt;li&gt;Animations (Animating views, layouts, activities and more)&lt;/li&gt;
+&lt;li&gt;Polishing a UI Tips and Tools (Links to key resources)&lt;/li&gt;
+&lt;li&gt;Android Design Guidelines (Overview of Android design standards)&lt;/li&gt;
+&lt;li&gt;Styling UI Screens FAQ (Answers to common questions around building screens)&lt;/li&gt;
+&lt;li&gt;Cloning a Login Screen Layout Guide (Creating attractive UIs, Q&amp;amp;A)&lt;/li&gt;
+&lt;li&gt;Developing Custom Themes (Integrating drawables, styles and themes)&lt;/li&gt;
+&lt;li&gt;Material Design Primer (Lollipop Design Overview)&lt;/li&gt;
+&lt;li&gt;Dynamic Color using Palettes (Adaptive colors, Android 5.0)&lt;/li&gt;
+&lt;li&gt;Ripple Animation (Android 5.0)&lt;/li&gt;
+&lt;li&gt;Shared Element Activity Transition (Android 5.0)&lt;/li&gt;
+&lt;li&gt;Circular Reveal Animation (Android 5.0)&lt;/li&gt;
+&lt;li&gt;Design Support Library (Material Design Library)&lt;/li&gt;
+&lt;li&gt;Chrome Custom Tabs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;###AdapterViews&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Using an ArrayAdapter with ListView (with custom list items)&lt;/li&gt;
+&lt;li&gt;Endless Scrolling with AdapterViews and RecyclerView (Infinite pagination)&lt;/li&gt;
+&lt;li&gt;Implementing Pull to Refresh Guide&lt;/li&gt;
+&lt;li&gt;Implementing a Horizontal ListView Guide (Scrolls horizontally)&lt;/li&gt;
+&lt;li&gt;Implementing a Heterogenous ListView (with different item types)&lt;/li&gt;
+&lt;li&gt;Using the RecyclerView (Android 5.0)&lt;/li&gt;
+&lt;li&gt;Heterogenous Layouts inside RecyclerView (Android 5.0)&lt;/li&gt;
+&lt;li&gt;Using the CardView (Android 5.0)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;###Custom Views&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Basic Painting with Views (Simple drawing app tutorial)&lt;/li&gt;
+&lt;li&gt;Defining Custom Views (Needs Attention)&lt;/li&gt;
+&lt;li&gt;Extending SurfaceView (Needs Attention)&lt;/li&gt;
+&lt;li&gt;Drawing with OpenGL and GLSurfaceView (Needs Attention)&lt;/li&gt;
+&lt;li&gt;Building a Custom Animated Progress Bar (Exercise)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;##Interaction&lt;/p&gt;
+&lt;p&gt;Exploring how to allow user interaction and navigation within an app:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;View Event Listeners (Clicks, Key Presses, Updates)&lt;/li&gt;
+&lt;li&gt;Creating Custom Listeners (Defining, setting and triggering events)&lt;/li&gt;
+&lt;li&gt;Displaying Toasts (Quick notices and includes custom views)&lt;/li&gt;
+&lt;li&gt;Displaying the Snackbar (Quick notices with actions)&lt;/li&gt;
+&lt;li&gt;Exploring the ActionBar (Includes adding ActionItems)&lt;/li&gt;
+&lt;li&gt;Extended ActionBar Guide (Split-bar, Custom ActionBar, etc)&lt;/li&gt;
+&lt;li&gt;Gestures and Touch Events (Swipe, Shake, or Dragging Events)&lt;/li&gt;
+&lt;li&gt;Menus and Popups (Context Menu, PopupMenu, PopupWindow)&lt;/li&gt;
+&lt;li&gt;Dialogs with DialogFragment (Displaying a content overlay)&lt;/li&gt;
+&lt;li&gt;Implementing a Rate Me Feature (For getting Play Store ratings)&lt;/li&gt;
+&lt;li&gt;Repeating Periodic Tasks (Handler, ScheduledThreadPoolExecutor)&lt;/li&gt;
+&lt;li&gt;Using the App Toolbar (ActionBar Replacement)&lt;/li&gt;
+&lt;li&gt;Floating Action Buttons (Android 5.0, Promoted Action)&lt;/li&gt;
+&lt;li&gt;Handling Scrolls with CoordinatorLayout (Collapsing toolbars)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Navigation&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Navigating Activities with Intents (Communicating between Activities)
+Common Navigation Paradigms (Tabs, Swipe-able Views, Pull-out Drawer)
+Common Implicit Intents (Making a Call, Sending a Text, Opening a URL)
+Navigation and Task Stacks (Controlling the behavior of the task stack)
+Sharing Content with Intents (and ShareActionProvider)
+Using Parcelable (Pass data fast between activities)
+Book Search Tutorial (Toolbar with SearchView and sharing content)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Networking and Models&lt;/p&gt;
+&lt;p&gt;Diving into the networking and model layers for data-driven apps:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Sending and Managing Network Requests (API Calls, Image Downloading)
+Displaying Images with the Picasso Library (Remote Image Downloading)
+Converting JSON to Models (JSON to Objects Deserialization)
+Leveraging the Gson Library (JSON deserialization library)
+Creating and Executing Async Tasks (Long-running Background Tasks)
+Handling ProgressBars (with Long-Running Tasks)
+Rotten Tomatoes Networking Tutorial
+Networking with the Volley Library
+Displaying Images with the Fresco Library
+Building Data-driven Apps with Parse
+Configuring a Parse Server
+Building Simple Chat Client with Parse
+Troubleshooting Common Issues with Parse
+Consuming APIs with Retrofit
+Sending and Receiving Data with Sockets
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Persistence&lt;/p&gt;
+&lt;p&gt;Exploring the strategies for data persistence:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Persisting Data to the Device (Preferences, Files, SQLite, ORMs)
+ActiveAndroid ORM Guide (and Q&amp;amp;A)
+Storing and Accessing SharedPreferences
+Local Databases with SQLiteOpenHelper
+Populating a ListView with a CursorAdapter
+Settings with PreferenceFragment
+Loading Contacts with Content Providers (CursorLoader, LoaderManager)
+Interacting with the Calendar (CalendarProvider)
+Creating Content Providers (Needs Attention)
+Clean Persistence with Sugar ORM (Installation, Queries, Migrations)
+DBFlow ORM Guide (Installation, Queries)
+Easier SQL with Cupboard
+Powerful Persistence with JDXA ORM
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Fragments&lt;/p&gt;
+&lt;p&gt;Understanding how to build powerful and flexible views using Fragments:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Creating and Using Fragments
+Displaying a DialogFragment
+Google Play Style Tabs using TabLayout
+Sliding Tabs with PagerSlidingTabStrip
+ViewPager with FragmentPagerAdapter
+Fragment Navigation Drawer
+Flexible User Interfaces (with Fragments)
+ActionBar Tabs with Fragments (Deprecated)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Sensors and Device SDKs&lt;/p&gt;
+&lt;p&gt;Exploring sensors and components available via the Android SDK:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Accessing the Camera and Stored Media (Camera, Photo Roll)
+Retrieving Location with LocationServices API (Location)
+Listening to Sensors using SensorManager (Light, Accelerometer)
+Audio Playback and Recording (MediaPlayer)
+Video Playback and Recording (VideoView)
+Google Maps Setup Guide (and Setup Genymotion)
+Google Maps API v2 Usage (Markers, InfoWindow)
+Connectivity using the Bluetooth API (Needs Attention)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Services&lt;/p&gt;
+&lt;p&gt;Digging into how to run background services or leverage Android system services:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Starting Background Services (with IntentService and Receivers)
+Notifications (Persistent Notices on the Dashboard)
+Push Messaging (Parse Push and Broadcast Receiver Overview)
+Google Cloud Messaging (Detailed GCM Implementation)
+Real-time Messaging (Needs Attention)
+Managing Threads and Custom Services (Looper, Handler, ThreadPoolExecutor)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Testing&lt;/p&gt;
+&lt;p&gt;Covering automated testing frameworks and tools for Android:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Android Testing Options
+Unit Testing with Robolectric
+UI Testing with Espresso
+UI Testing with Robotium (Needs Attention)
+Android Testing Framework (Needs Attention)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Libraries&lt;/p&gt;
+&lt;p&gt;Covers usage of more advanced third-party libraries and SDKs that save time and improve the maintainability of your code:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Must Have Libraries (Networking, Persistence, Compatibility, Convenience, etc)
+Popular External Tools (Analytics, Crash Reporting)
+Dependency Injection with Dagger 2
+Reducing View Boilerplate with Butterknife (View Annotations)
+Communicating with an Event Bus (Using EventBus to publish and receive events)
+Using Parceler (Creating Parcelable objects)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Production&lt;/p&gt;
+&lt;p&gt;Covers guides specifically related to developing and publishing robust Android applications:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Publishing to the Play Store (Slides)
+Publishing with Android Studio
+Debugging and Profiling Apps (Needs Attention)
+Android Best Practices
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Workflow&lt;/p&gt;
+&lt;p&gt;Focused on issues like deployment, dependency management, etc:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Getting Started with Gradle
+Using Android Studio
+Installing Android SDK Tools
+Building Gradle Projects with Jenkins CI
+Setting up Travis CI
+Collaborating on Projects with Git (Git, Team)
+Presenting an Android Device (Cast Device to Laptop)
+Recording Video of an Android Device
+Configuring ProGuard
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Contributing&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Contributing back to Android
+Building your own Android Library
+Open Source projects for Android Development
+&lt;/code&gt;&lt;/pre&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;##Getting Started&lt;/p&gt;
+&lt;p&gt;###Totally new to Android? Start here.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Getting Started as a Developer (New to programming?)&lt;/li&gt;
+&lt;l
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="http://linww.in/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>测试</title>
+    <link href="http://linww.in/2016/05/22/%E6%B5%8B%E8%AF%95/"/>
+    <id>http://linww.in/2016/05/22/测试/</id>
+    <published>2016-05-21T16:00:00.000Z</published>
+    <updated>2016-05-22T11:40:14.450Z</updated>
     
     <content type="html">&lt;p&gt;如果你使用过 Sass 3.3 之前的版本，那么你一定对那段时光颇有感触，那时候没有现如今这么好的条件，那时候的 Map 还只能用多重列表（lists of list）来模拟。多重列表可以实现复杂数据的嵌套定义，但却不是以键值对的形式实现的，所有当我们需要获取其中特定的某一项时就会比较麻烦。Map 这种数据类型天生就是基于键值对的形式，非常便于组织数据。&lt;/p&gt;
 &lt;p&gt;自从可以使用 Map 之后，开发者们开始毫无顾忌地定义 Map 存储数据，比如断点宽度、颜色值、栅格布局等等响应式排版的细节，都被一股脑的塞进了 Map 中。&lt;/p&gt;
@@ -112,7 +346,241 @@
     </summary>
     
     
-      <category term="css" scheme="http://linww.in/tags/css/"/>
+      <category term="test" scheme="http://linww.in/tags/test/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CodePath目录</title>
+    <link href="http://linww.in/2015/10/21/CodePath%E7%9B%AE%E5%BD%95/"/>
+    <id>http://linww.in/2015/10/21/CodePath目录/</id>
+    <published>2015-10-21T02:34:12.000Z</published>
+    <updated>2016-05-23T12:23:07.964Z</updated>
+    
+    <content type="html">&lt;p&gt;##Getting Started&lt;/p&gt;
+&lt;p&gt;###Totally new to Android? Start here.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Getting Started as a Developer (New to programming?)&lt;/li&gt;
+&lt;li&gt;Getting Started with Android (Detailed Post With Many Links)&lt;/li&gt;
+&lt;li&gt;Setting up Android Studio (Installation Slides) or Setting up IntelliJ IDEA&lt;/li&gt;
+&lt;li&gt;Installing a Faster Emulator (Genymotion Guide)&lt;/li&gt;
+&lt;li&gt;Architecture of Mobile Apps (Concept Slides)&lt;/li&gt;
+&lt;li&gt;Mobile Screen Archetypes (Common mobile app screen categories)&lt;/li&gt;
+&lt;li&gt;Troubleshooting Common Issues (Running into problems?)&lt;/li&gt;
+&lt;li&gt;Developing our First App Using Android Studio (Step-by-Step Todo App)&lt;/li&gt;
+&lt;li&gt;Todo App Guide (Todo App steps in guide format)&lt;/li&gt;
+&lt;li&gt;Sample Android Apps (Code repositories)&lt;/li&gt;
+&lt;li&gt;Free Android Curriculum (Additional resources)&lt;/li&gt;
+&lt;li&gt;Google Android Glossary (Defining Common Terms)&lt;/li&gt;
+&lt;li&gt;Android Learning Resources&lt;/li&gt;
+&lt;li&gt;Keeping Updated with Android (Podcasts, blogs, newsletters)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;###Using Eclipse? See below.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Setting up Eclipse ADT (Detailed Slides)&lt;/li&gt;
+&lt;li&gt;Developing our First App Using Eclipse ADT (Step-by-Step Todo App)&lt;/li&gt;
+&lt;li&gt;Troubleshooting Eclipse Issues (Running into eclipse problems?)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;##Structure&lt;/p&gt;
+&lt;p&gt;###Exploring the foundations of app development:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Using Context (What is context and how is it used?)&lt;/li&gt;
+&lt;li&gt;Android Directory Structure (Files and Folders for Android apps)&lt;/li&gt;
+&lt;li&gt;Organizing your Source Files (Cleaning up source of your apps)&lt;/li&gt;
+&lt;li&gt;Architecture of Android Apps (Understanding how apps should be structured)&lt;/li&gt;
+&lt;li&gt;Understanding App Resources (Understanding Strings and Resources)&lt;/li&gt;
+&lt;li&gt;Understanding the Activity Lifecycle (How does an activity work?)&lt;/li&gt;
+&lt;li&gt;Handling Configuration Changes (Screen Rotation)&lt;/li&gt;
+&lt;li&gt;Migrating to the AppCompat Library (Using the Support Libraries)&lt;/li&gt;
+&lt;li&gt;App Permissions (How to request the permissions you need)&lt;/li&gt;
+&lt;li&gt;Managing Runtime Permissions with PermissionsDispatcher&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;##Views and Layouts&lt;/p&gt;
+&lt;p&gt;###Exploring the gritty details of views, layout, styling and common UI patterns:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Constructing View Layouts (How to layout views)&lt;/li&gt;
+&lt;li&gt;Defining Views and their Attributes (Gravity, Margin, Padding, etc)&lt;/li&gt;
+&lt;li&gt;Working with the TextView (Properties, Drawables, Custom Fonts)&lt;/li&gt;
+&lt;li&gt;Working with the EditText (Properties)&lt;/li&gt;
+&lt;li&gt;Working with the ImageView (Drawables, Size and Scale, Density, Raw Bitmaps)&lt;/li&gt;
+&lt;li&gt;Working with Input Views (Spinner, RatingBar, etc)&lt;/li&gt;
+&lt;li&gt;Working with the Soft Keyboard&lt;/li&gt;
+&lt;li&gt;Working with the WebView&lt;/li&gt;
+&lt;li&gt;Working with the ScrollView&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;###Designing and Styling Views&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Drawables (and how to polish UI views)&lt;/li&gt;
+&lt;li&gt;Styles and Themes (Consolidating view styles)&lt;/li&gt;
+&lt;li&gt;Animations (Animating views, layouts, activities and more)&lt;/li&gt;
+&lt;li&gt;Polishing a UI Tips and Tools (Links to key resources)&lt;/li&gt;
+&lt;li&gt;Android Design Guidelines (Overview of Android design standards)&lt;/li&gt;
+&lt;li&gt;Styling UI Screens FAQ (Answers to common questions around building screens)&lt;/li&gt;
+&lt;li&gt;Cloning a Login Screen Layout Guide (Creating attractive UIs, Q&amp;amp;A)&lt;/li&gt;
+&lt;li&gt;Developing Custom Themes (Integrating drawables, styles and themes)&lt;/li&gt;
+&lt;li&gt;Material Design Primer (Lollipop Design Overview)&lt;/li&gt;
+&lt;li&gt;Dynamic Color using Palettes (Adaptive colors, Android 5.0)&lt;/li&gt;
+&lt;li&gt;Ripple Animation (Android 5.0)&lt;/li&gt;
+&lt;li&gt;Shared Element Activity Transition (Android 5.0)&lt;/li&gt;
+&lt;li&gt;Circular Reveal Animation (Android 5.0)&lt;/li&gt;
+&lt;li&gt;Design Support Library (Material Design Library)&lt;/li&gt;
+&lt;li&gt;Chrome Custom Tabs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;###AdapterViews&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Using an ArrayAdapter with ListView (with custom list items)&lt;/li&gt;
+&lt;li&gt;Endless Scrolling with AdapterViews and RecyclerView (Infinite pagination)&lt;/li&gt;
+&lt;li&gt;Implementing Pull to Refresh Guide&lt;/li&gt;
+&lt;li&gt;Implementing a Horizontal ListView Guide (Scrolls horizontally)&lt;/li&gt;
+&lt;li&gt;Implementing a Heterogenous ListView (with different item types)&lt;/li&gt;
+&lt;li&gt;Using the RecyclerView (Android 5.0)&lt;/li&gt;
+&lt;li&gt;Heterogenous Layouts inside RecyclerView (Android 5.0)&lt;/li&gt;
+&lt;li&gt;Using the CardView (Android 5.0)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;###Custom Views&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Basic Painting with Views (Simple drawing app tutorial)&lt;/li&gt;
+&lt;li&gt;Defining Custom Views (Needs Attention)&lt;/li&gt;
+&lt;li&gt;Extending SurfaceView (Needs Attention)&lt;/li&gt;
+&lt;li&gt;Drawing with OpenGL and GLSurfaceView (Needs Attention)&lt;/li&gt;
+&lt;li&gt;Building a Custom Animated Progress Bar (Exercise)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;##Interaction&lt;/p&gt;
+&lt;p&gt;Exploring how to allow user interaction and navigation within an app:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;View Event Listeners (Clicks, Key Presses, Updates)&lt;/li&gt;
+&lt;li&gt;Creating Custom Listeners (Defining, setting and triggering events)&lt;/li&gt;
+&lt;li&gt;Displaying Toasts (Quick notices and includes custom views)&lt;/li&gt;
+&lt;li&gt;Displaying the Snackbar (Quick notices with actions)&lt;/li&gt;
+&lt;li&gt;Exploring the ActionBar (Includes adding ActionItems)&lt;/li&gt;
+&lt;li&gt;Extended ActionBar Guide (Split-bar, Custom ActionBar, etc)&lt;/li&gt;
+&lt;li&gt;Gestures and Touch Events (Swipe, Shake, or Dragging Events)&lt;/li&gt;
+&lt;li&gt;Menus and Popups (Context Menu, PopupMenu, PopupWindow)&lt;/li&gt;
+&lt;li&gt;Dialogs with DialogFragment (Displaying a content overlay)&lt;/li&gt;
+&lt;li&gt;Implementing a Rate Me Feature (For getting Play Store ratings)&lt;/li&gt;
+&lt;li&gt;Repeating Periodic Tasks (Handler, ScheduledThreadPoolExecutor)&lt;/li&gt;
+&lt;li&gt;Using the App Toolbar (ActionBar Replacement)&lt;/li&gt;
+&lt;li&gt;Floating Action Buttons (Android 5.0, Promoted Action)&lt;/li&gt;
+&lt;li&gt;Handling Scrolls with CoordinatorLayout (Collapsing toolbars)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Navigation&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Navigating Activities with Intents (Communicating between Activities)
+Common Navigation Paradigms (Tabs, Swipe-able Views, Pull-out Drawer)
+Common Implicit Intents (Making a Call, Sending a Text, Opening a URL)
+Navigation and Task Stacks (Controlling the behavior of the task stack)
+Sharing Content with Intents (and ShareActionProvider)
+Using Parcelable (Pass data fast between activities)
+Book Search Tutorial (Toolbar with SearchView and sharing content)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Networking and Models&lt;/p&gt;
+&lt;p&gt;Diving into the networking and model layers for data-driven apps:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Sending and Managing Network Requests (API Calls, Image Downloading)
+Displaying Images with the Picasso Library (Remote Image Downloading)
+Converting JSON to Models (JSON to Objects Deserialization)
+Leveraging the Gson Library (JSON deserialization library)
+Creating and Executing Async Tasks (Long-running Background Tasks)
+Handling ProgressBars (with Long-Running Tasks)
+Rotten Tomatoes Networking Tutorial
+Networking with the Volley Library
+Displaying Images with the Fresco Library
+Building Data-driven Apps with Parse
+Configuring a Parse Server
+Building Simple Chat Client with Parse
+Troubleshooting Common Issues with Parse
+Consuming APIs with Retrofit
+Sending and Receiving Data with Sockets
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Persistence&lt;/p&gt;
+&lt;p&gt;Exploring the strategies for data persistence:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Persisting Data to the Device (Preferences, Files, SQLite, ORMs)
+ActiveAndroid ORM Guide (and Q&amp;amp;A)
+Storing and Accessing SharedPreferences
+Local Databases with SQLiteOpenHelper
+Populating a ListView with a CursorAdapter
+Settings with PreferenceFragment
+Loading Contacts with Content Providers (CursorLoader, LoaderManager)
+Interacting with the Calendar (CalendarProvider)
+Creating Content Providers (Needs Attention)
+Clean Persistence with Sugar ORM (Installation, Queries, Migrations)
+DBFlow ORM Guide (Installation, Queries)
+Easier SQL with Cupboard
+Powerful Persistence with JDXA ORM
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Fragments&lt;/p&gt;
+&lt;p&gt;Understanding how to build powerful and flexible views using Fragments:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Creating and Using Fragments
+Displaying a DialogFragment
+Google Play Style Tabs using TabLayout
+Sliding Tabs with PagerSlidingTabStrip
+ViewPager with FragmentPagerAdapter
+Fragment Navigation Drawer
+Flexible User Interfaces (with Fragments)
+ActionBar Tabs with Fragments (Deprecated)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Sensors and Device SDKs&lt;/p&gt;
+&lt;p&gt;Exploring sensors and components available via the Android SDK:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Accessing the Camera and Stored Media (Camera, Photo Roll)
+Retrieving Location with LocationServices API (Location)
+Listening to Sensors using SensorManager (Light, Accelerometer)
+Audio Playback and Recording (MediaPlayer)
+Video Playback and Recording (VideoView)
+Google Maps Setup Guide (and Setup Genymotion)
+Google Maps API v2 Usage (Markers, InfoWindow)
+Connectivity using the Bluetooth API (Needs Attention)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Services&lt;/p&gt;
+&lt;p&gt;Digging into how to run background services or leverage Android system services:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Starting Background Services (with IntentService and Receivers)
+Notifications (Persistent Notices on the Dashboard)
+Push Messaging (Parse Push and Broadcast Receiver Overview)
+Google Cloud Messaging (Detailed GCM Implementation)
+Real-time Messaging (Needs Attention)
+Managing Threads and Custom Services (Looper, Handler, ThreadPoolExecutor)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Testing&lt;/p&gt;
+&lt;p&gt;Covering automated testing frameworks and tools for Android:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Android Testing Options
+Unit Testing with Robolectric
+UI Testing with Espresso
+UI Testing with Robotium (Needs Attention)
+Android Testing Framework (Needs Attention)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Libraries&lt;/p&gt;
+&lt;p&gt;Covers usage of more advanced third-party libraries and SDKs that save time and improve the maintainability of your code:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Must Have Libraries (Networking, Persistence, Compatibility, Convenience, etc)
+Popular External Tools (Analytics, Crash Reporting)
+Dependency Injection with Dagger 2
+Reducing View Boilerplate with Butterknife (View Annotations)
+Communicating with an Event Bus (Using EventBus to publish and receive events)
+Using Parceler (Creating Parcelable objects)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Production&lt;/p&gt;
+&lt;p&gt;Covers guides specifically related to developing and publishing robust Android applications:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Publishing to the Play Store (Slides)
+Publishing with Android Studio
+Debugging and Profiling Apps (Needs Attention)
+Android Best Practices
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Workflow&lt;/p&gt;
+&lt;p&gt;Focused on issues like deployment, dependency management, etc:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Getting Started with Gradle
+Using Android Studio
+Installing Android SDK Tools
+Building Gradle Projects with Jenkins CI
+Setting up Travis CI
+Collaborating on Projects with Git (Git, Team)
+Presenting an Android Device (Cast Device to Laptop)
+Recording Video of an Android Device
+Configuring ProGuard
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Contributing&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Contributing back to Android
+Building your own Android Library
+Open Source projects for Android Development
+&lt;/code&gt;&lt;/pre&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;##Getting Started&lt;/p&gt;
+&lt;p&gt;###Totally new to Android? Start here.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Getting Started as a Developer (New to programming?)&lt;/li&gt;
+&lt;l
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="http://linww.in/tags/Android/"/>
     
   </entry>
   
