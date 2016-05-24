@@ -351,6 +351,26 @@ Open Source projects for Android Development
   </entry>
   
   <entry>
+    <title>关于Context的用法</title>
+    <link href="http://linww.in/2015/10/21/%E5%85%B3%E4%BA%8EContext%E7%9A%84%E7%94%A8%E6%B3%95/"/>
+    <id>http://linww.in/2015/10/21/关于Context的用法/</id>
+    <published>2015-10-21T02:34:12.000Z</published>
+    <updated>2016-05-24T11:38:54.518Z</updated>
+    
+    <content type="html">&lt;h1 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h1&gt;&lt;h1 id=&quot;Context用来干嘛&quot;&gt;&lt;a href=&quot;#Context用来干嘛&quot; class=&quot;headerlink&quot; title=&quot;Context用来干嘛&quot;&gt;&lt;/a&gt;Context用来干嘛&lt;/h1&gt;&lt;h1 id=&quot;Application-vs-Activity&quot;&gt;&lt;a href=&quot;#Application-vs-Activity&quot; class=&quot;headerlink&quot; title=&quot;Application vs Activity&quot;&gt;&lt;/a&gt;Application vs Activity&lt;/h1&gt;&lt;h1 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h1&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h1&gt;&lt;h1 id=&quot;Context用来干嘛&quot;&gt;&lt;a href=&quot;#Context用来干嘛&quot; class=&quot;headerlink&quot; title=&quot;Con
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="http://linww.in/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
     <title>关于ScrollView</title>
     <link href="http://linww.in/2015/10/21/%E5%85%B3%E4%BA%8EScrollView/"/>
     <id>http://linww.in/2015/10/21/关于ScrollView/</id>
